@@ -1,14 +1,24 @@
-var nommbre = document.getElementById("nombre");
-var apellido = document.getElementById("apellido");
-var dni = document.getElementById("dni");
-var direccion = document.getElementById("direccion");
 var mostrar = document.getElementById("add-ficha");
 
 mostrar.onclick = function(){
 
-  document.getElementById("name").innerHTML = nombre.value;
-  document.getElementById("lastName").innerHTML = apellido.value;
-  document.getElementById("id").innerHTML = dni.value;
-  document.getElementById("adress").innerHTML = direccion.value;
+  var nombre = document.getElementById("nombre").value;
+  var apellido = document.getElementById("apellido").value;
+  var dni = document.getElementById("dni").value;
+  var direccion = document.getElementById("direccion").value;
+
+  if(nombre != "" && apellido != "" && dni!= "" && direccion!=""){
+
+    document.getElementById("name").innerHTML = nombre;
+    document.getElementById("lastName").innerHTML = apellido;
+    document.getElementById("id").innerHTML = dni;
+    document.getElementById("adress").innerHTML = direccion;
+
+    document.getElementById("nombre").value = "";
+    document.getElementById("apellido").value = "";
+    document.getElementById("dni").value = "";
+    document.getElementById("direccion").value = "";
+
+    }
 
 }

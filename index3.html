@@ -19,24 +19,33 @@
         <input id="apellido" type="text" required>
       </div><br>
       <div>
-        <label for="dni">Ingresa tu DNI: </label>
-        <input id="dni" type="text" pattern="\d{8}$" required>
+        <label for="rol">Ingresa tu Rol: </label>
+        <input id="rol" type="text" required>
       </div><br>
       <div>
-        <label for="direccion">Ingresa tu dirección: </label>
-        <input id="direccion" type="text" required>
+        <label for="cumple">Ingresa tu Cumpleaños: </label>
+        <input id="cumple" type="text" required>
       </div><br>
       <button id="add-ficha">Enviar Datos</button>
+      <button id="printAll">Imprimir Todos</button>
     </form>
-    <ul>
-      <li>Nombre: <span id="name"></span></li>
-      <li>Apellido: <span id="lastName"></span></li>
-      <li>DNI: <span id="id"></span></li>
-      <li>Direccion: <span id="adress"></span></li>
-    </ul>
+<!--
+    <div id="ficha">
+      <div>
+        <ul>
+          <li>Nombre: <span id="name"></span></li>
+          <li>Apellido: <span id="lastName"></span></li>
+          <li>Rol: <span id="status"></span></li>
+          <li>Cumpleaños: <span id="birthday"></span></li>
+        </ul>
+      </div>
+    </div>
+
+-->
+<div id="todos"></div>
   </section>
 
 
-<script src="assets/js/j2.js" charset="utf-8"></script>
+<script src="assets/js/js3.js" charset="utf-8"></script>
 </body>
 </html>
