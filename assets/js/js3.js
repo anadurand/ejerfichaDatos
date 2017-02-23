@@ -29,7 +29,7 @@ function Persona(name, lastName, status, birthday){
 
   }
 }
-
+//boton enviar datos
 mostrar.onclick = function(){
 
   var nombre = document.getElementById("nombre").value;
@@ -40,6 +40,7 @@ mostrar.onclick = function(){
   if(nombre != "" && apellido != "" && rol!= "" && cumple!=""){
 
     var persona = new Persona(nombre, apellido, rol, cumple);
+//ponga vacio el formulario
     document.getElementById("todos").innerHTML = persona.print();
     document.getElementById("nombre").value = "";
     document.getElementById("apellido").value = "";
@@ -51,6 +52,7 @@ mostrar.onclick = function(){
 
 }
 
+//boton para imprimir todos
 print.onclick = function(){
   var ficha = "";
   arrayPersona.forEach(function(item,i){
