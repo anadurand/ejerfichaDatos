@@ -9,15 +9,23 @@ mostrar.onclick = function(){
 
   if(nombre != "" && apellido != "" && dni!= "" && direccion!=""){
 
-    document.getElementById("name").innerHTML = nombre;
-    document.getElementById("lastName").innerHTML = apellido;
-    document.getElementById("id").innerHTML = dni;
-    document.getElementById("adress").innerHTML = direccion;
+    if(dni.length!=8 || dni.match(/[^0-9]/g)){
+      alert("Numero de DNI invalido");
+    }else{
+      document.getElementById("name").innerHTML = nombre.toUpperCase();
+      document.getElementById("lastName").innerHTML = apellido.toUpperCase();
+      document.getElementById("id").innerHTML = dni;
+      document.getElementById("adress").innerHTML = direccion;
 
-    document.getElementById("nombre").value = "";
-    document.getElementById("apellido").value = "";
-    document.getElementById("dni").value = "";
-    document.getElementById("direccion").value = "";
+      document.getElementById("nombre").value = "";
+      document.getElementById("apellido").value = "";
+      document.getElementById("dni").value = "";
+      document.getElementById("direccion").value = "";
+
+
+    }
+
+
 
     }
 
